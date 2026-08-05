@@ -1,13 +1,24 @@
 import AddTask from "./AddTask";
 import TaskCount from "./TaskCount";
 import TaskList from "./TaskList";
-function Body() {
+function Body({
+  taskCount,
+  AddTaskinList,
+  ClearInputTask,
+  setInputTask,
+  inputTask,
+}) {
   return (
-    <div class="card-body p-4">
+    <div className="card-body p-4">
       {/* Add Task */}
-      <AddTask />
+      <AddTask
+        AddTaskinList={AddTaskinList}
+        ClearInputTask={ClearInputTask}
+        setInputTask={setInputTask}
+        inputTask={inputTask}
+      />
       {/* Task Count */}
-      <TaskCount />
+      <TaskCount taskCount={taskCount} />
       {/* Task List */}
       <TaskList />
     </div>

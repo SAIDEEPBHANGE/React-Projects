@@ -1,9 +1,9 @@
 function Footer() {
   return (
-    <div class="card-footer bg-white text-center py-3 rounded-bottom-4">
-      <button class="btn btn-success me-2">Mark All Complete</button>
+    <div className="card-footer bg-white text-center py-3 rounded-bottom-4">
+      <button className="btn btn-success me-2">Mark All Complete</button>
 
-      <button class="btn btn-outline-secondary">Clear Completed</button>
+      <button className="btn btn-outline-secondary">Clear Completed</button>
     </div>
   );
 }

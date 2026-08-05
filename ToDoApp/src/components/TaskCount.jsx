@@ -1,11 +1,13 @@
-function TaskCount() {
+function TaskCount({ taskCount }) {
   return (
-    <div class="d-flex justify-content-between mb-3">
-      <span class="badge bg-primary"> Total: 5 </span>
-
-      <span class="badge bg-success"> Completed: 2 </span>
-
-      <span class="badge bg-warning text-dark"> Pending: 3 </span>
+    <div className="d-flex justify-content-between mb-3">
+      <span className="badge bg-primary"> Total: {taskCount.total} </span>
+      <span className="badge bg-success">
+        Completed: {taskCount.completed}
+      </span>
+      <span className="badge bg-warning text-dark">
+        Pending: {taskCount.pending}
+      </span>
     </div>
   );
 }
