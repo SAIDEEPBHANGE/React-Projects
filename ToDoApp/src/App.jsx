@@ -29,7 +29,7 @@ function App() {
     };
     setTasksList([...tasksList, taskEle]);
     setInputTask("");
-    setKeyId(keyId++);
+    setKeyId(keyId + 1);
   };
   const ClearInputTask = () => {
     setInputTask("");
