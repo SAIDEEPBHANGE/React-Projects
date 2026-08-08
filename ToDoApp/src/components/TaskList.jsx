@@ -1,11 +1,34 @@
-import Task from "./Task";
-
-function TaskList() {
+import TaskView from "./TaskView";
+import TaskInput from "./TaskInput";
+function TaskList({
+  tasksList,
+  SaveTask,
+  CancelTask,
+  MarkDownTask,
+  EditTask,
+  DeleteTask,
+}) {
+  console.log("TaskList: ", tasksList);
   return (
     <div className="list-group">
-      {Array.from({ length: 5 }).map((_, i) => (
-        <Task key={i} />
-      ))}
+      {tasksList.map((element) =>
+        !element.isEditing ? (
+          <TaskView
+            key={element.id}
+            TaskInfo={element}
+            MarkDownTask={MarkDownTask}
+            EditTask={EditTask}
+            DeleteTask={DeleteTask}
+          />
+        ) : (
+          <TaskInput
+            key={element.id}
+            TaskInfo={element}
+            SaveTask={SaveTask}
+            CancelTask={CancelTask}
+          />
+        ),
+      )}
     </div>
   );
 }

@@ -7,6 +7,12 @@ function Body({
   ClearInputTask,
   setInputTask,
   inputTask,
+  tasksList,
+  SaveTask,
+  CancelTask,
+  MarkDownTask,
+  EditTask,
+  DeleteTask,
 }) {
   return (
     <div className="card-body p-4">
@@ -20,7 +26,14 @@ function Body({
       {/* Task Count */}
       <TaskCount taskCount={taskCount} />
       {/* Task List */}
-      <TaskList />
+      <TaskList
+        tasksList={tasksList}
+        SaveTask={SaveTask}
+        CancelTask={CancelTask}
+        MarkDownTask={MarkDownTask}
+        EditTask={EditTask}
+        DeleteTask={DeleteTask}
+      />
     </div>
   );
 }
