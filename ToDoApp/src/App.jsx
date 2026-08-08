@@ -100,8 +100,8 @@ function App() {
     });
   }, [tasksList]);
   return (
-    <div className="row justify-content-center">
-      <div className="col-12">
+    <div className="row justify-content-center m-5">
+      <div className="col-10">
         <div className="card shadow border-0 rounded-4">
           {/* Header */}
           <Header />
